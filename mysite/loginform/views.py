@@ -19,6 +19,12 @@ def home(request):
 	return render(request,'home.html',{
 		'count':count
 		})
+
+def trade(request):
+	count =User.objects.count()
+	return render(request,'trade.html',{
+		'count':count
+		})
 	
 def index(request):
     trd = {}
@@ -82,7 +88,7 @@ def logo(request):
 def get_crypto_data():
     url = 'https://poloniex.com/public?command=returnTradeHistory&currencyPair=BTC_ETH'
     parameters ={
-        'id':'10'
+        'id':'1'
         }
     headers = {
         'Accepts': 'application/json',

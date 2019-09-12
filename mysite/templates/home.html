@@ -21,46 +21,17 @@
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="static/images/favicon.ico">
+<style type="text/css">
+ 
+</style>
+
 </head><!--/head-->
 
 <body>
-<!--.preloader-->
-  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
-  <!--/.preloader-->
-
   <header id="home">
-    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image: url(static/images/slider/chart.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome to <span>BOT TRADING</span></h1>
-            <p class="animated fadeInRightBig"></p>
-
-          </div>
-        </div>
-        <div class="item" style="background-image: url(static/images/slider/bitcoin.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Say Hello to <span>BOT Trading</span></h1>
-
-
-          </div>
-        </div>
-        <div class="item" style="background-image: url(/static/images/slider/stack.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">We are <span>Creative</span></h1>
-
-          </div>
-        </div>
-      </div>
-      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-
-      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
-
-    </div><!--/#home-slider-->
 
     <div class="main-nav">
-      <div class="container">
+      <div class="container" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -76,14 +47,14 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="scroll active"><a href="#home">Home</a></li>
 
-             {% if user.is_authenticated %}
-               <li class="nav-item dropdown">
+            {% if user.is_authenticated %}
+             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              {{ user.username }}(bal:200$)
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  style="color:blue">Change Password</a>
+                      <a class="dropdown-item" style="color:blue">Change Password</a>
 
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="{% url 'logout' %}" style="color:blue">Logout</a>
@@ -92,10 +63,15 @@
                     </div>
                  </li>
 
-              {% else %}
-                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
-              {% endif %}
+
+
+        {% else %}
+
+      <li>
+      <a href="{% url 'login' %}" class="btn btn-outline-secondary">Log in/Signup</a></li>
+
+
+        {% endif %}
           </ul>
         </div>
       </div>
@@ -106,15 +82,10 @@
 {% if user.is_authenticated %}
   <section id="portfolio">
     <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>Choose BOTS</h2>
-          <p></p>
-        </div>
-      </div>
+      
 
-      <div class="row">
-
+      <div class="row" style="">
+            <center><h1>Choose BOTS</h1></center>
     <div class="col-sm-4">
 
       <div class="card">
@@ -184,9 +155,8 @@
     </div>
   </div>
 
-    </div>
-  </div>
-
+    
+</div>
 
 </section>
 
@@ -196,7 +166,7 @@
   <section id="portfol">
     <div class="container">
 
-      <div class="row">
+      <div class="row" style="height: 10px;padding: 230px;">
 
     <div class="col-sm-12">
 
@@ -250,16 +220,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <p>&copy; 2019 BOT TRADE </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
+   
   </footer>
 
   <script type="text/javascript" src="static/js/jquery.js"></script>

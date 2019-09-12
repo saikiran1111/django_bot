@@ -28,35 +28,7 @@
   <!--/.preloader-->
 
   <header id="home">
- <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image: url(static/images/slider/chart.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome to <span>BOT TRADING</span></h1>
-            <p class="animated fadeInRightBig"></p>
-
-          </div>
-        </div>
-        <div class="item" style="background-image: url(static/images/slider/bitcoin.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Say Hello to <span>BOT Trading</span></h1>
-
-
-          </div>
-        </div>
-        <div class="item" style="background-image: url(/static/images/slider/stack.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">We are <span>Creative</span></h1>
-
-          </div>
-        </div>
-      </div>
-      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-
-      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
-
-    </div><!--/#home-slider-->
+ 
 
     <div class="main-nav">
       <div class="container">
@@ -108,8 +80,8 @@
 
 {% if user.is_authenticated %}
 
-  <section id="team">
-    <div class="container">
+  <section id="team" >
+    <div class="container" style="height: 500px; padding: 20px;">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
           <h1><b>Choose Exchange</b></h1>
@@ -122,14 +94,14 @@
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
 
 
-                <img  src="static/images/team/poloniexx.png" alt="" width ="350" height="150">
+                <img  src="static/image/poloniex.png" alt="" width ="350" height="150">
 
               <div class="member-info">
                  <h3></h3>
                  <h3></h3>
                 <h3>Poloniex</h3>
                 <p>Poloniex is a US-based digital asset exchange offering maximum security and advanced trading features</p>
-                <a class="btn btn-primary"  href="{%url 'index'%}">Exchange</a>
+                <a class="btn btn-primary"  href="{%url 'trade' %}">Exchange</a>
               </div>
 
             </div>
@@ -137,12 +109,12 @@
           <div class="col-sm-4">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
 
-                <img  src="static/images/team/bitttrex.png" alt="" width="350" height="150">
+                <img  src="static/image/bittrex.png" alt="" width="350" height="150">
 
               <div class="member-info">
                 <h3>BITREX</h3>
                 <p>Bittrex is a global leader in the  premier U.S.-based blockchain trading platform</p>
-                <a class="btn btn-primary"  href="{%url 'index'%}">Exchange</a>
+                <a class="btn btn-primary"  href="{%url 'trade' %}">Exchange</a>
 
               </div>
 
@@ -151,12 +123,12 @@
           <div class="col-sm-4">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
 
-                <img src="static/images/team/binancee.png" alt="" width="350" height="150">
+                <img src="static/image/binance.png" alt="" width="350" height="150">
 
               <div class="member-info">
                 <h3>Binance</h3>
                 <p>World's leading cryptocurrency exchange,Binance spans an entire ecosystem</p>
-                <a class="btn btn-primary"  href="{%url 'index'%}">Exchange</a>
+                <a class="btn btn-primary"  href="{%url 'trade' %}">Exchange</a>
               </div>
 
               </div>
@@ -184,9 +156,7 @@
   <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
-        <div class="footer-logo">
-          <a href="{% url 'home' %}"><img class="img-responsive" src="static/images/icon.jpg" width="70" alt="Bot Trader"></a>
-        </div>
+        
         <div class="social-icons">
           <ul>
             <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
@@ -199,16 +169,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <p>&copy; 2019 BOT TRADE </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    
   </footer>
 
   <script type="text/javascript" src="static/js/jquery.js"></script>

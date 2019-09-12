@@ -24,15 +24,12 @@
 </head><!--/head-->
 
 <body>
-
-  <!--.preloader-->
-  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
+    <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
 
   <header id="home">
+ 
 
-  
-    
     <div class="main-nav">
       <div class="container">
         <div class="navbar-header">
@@ -43,7 +40,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="{% url 'home' %}">
-            <h1><img class="img-responsive"  src="static/images/icon.jpg" width="70" alt="Bot Trader"></h1>
+            <h1><img class="img-responsive" src="static/images/icon.jpg" width="70" alt="Bot Trader"></h1>
           </a>
         </div>
         <div class="collapse navbar-collapse">
@@ -52,29 +49,29 @@
 
              {% if user.is_authenticated %}
              <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						 {{ user.username }}(bal:200$)
-						        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             {{ user.username }}(bal:200$)
+                    </a>
 
-						        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-						          <a class="dropdown-item"  style="color:blue">Change Password</a>
+                    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" style="color:blue">Change Password</a>
 
-						          <div class="dropdown-divider"></div>
-						          <a class="dropdown-item" href="{% url 'logout' %}" style="color:blue">Logout</a>
-
-
-						        </div>
-						     </li>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'logout' %}" style="color:blue">Logout</a>
 
 
-
-				{% else %}
-
-			<li>
-			<a href="{% url 'login' %}" class="btn btn-outline-secondary">Log in/Signup</a></li>
+                    </div>
+                 </li>
 
 
-				{% endif %}
+
+        {% else %}
+
+      <li>
+      <a href="{% url 'login' %}" class="btn btn-outline-secondary">Log in/Signup</a></li>
+
+
+        {% endif %}
           </ul>
         </div>
       </div>
@@ -83,69 +80,64 @@
 
 {% if user.is_authenticated %}
 
-  <section id="pricing">
-    <div class="container">
-      <div class="row">
-      	 <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>Market Trading (BTC-ETH)</h2>
+  <section id="team" >
+    <div class="container" style="height: 500px; ">
+      
+          
+       <div class="row">
+         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          <h2>Choose Trade</h2>
 
-        <div class="list-group" style="height: 300px; border: 50px; padding: 20px;overflow: auto;">
+            <div class="col-sm-4">
 
-                <div class="list-group-item list-group-item-primary">
-                <div class="row">
-
-                    <div class="col-md-3">
-                        <label>Price</label>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Type</label>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Amount</label>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Total</label>
-                    </div>
-
-
-				</div>
-
-            {% for coin in crypto_data %}
-            <div class="list-group-item list-group-item-{% if coin.percent_change_1h.0 == '-'%}danger{% else %}success{% endif %}">
-                <div class="row">
-                    <div class="col-md-3">
-                        {{coin.rate}}
-                    </div>
-                    <div class="col-md-3">
-                        {{coin.type}}
-                    </div>
-                    <div class="col-md-3">
-                        {{coin.amount}}
-                    </div>
-                    <div class="col-md-3">
-                        {{coin.total}}
-                    </div>
+              <div class="card">
+                <div class="card-body">
+                        <center>
+                        <img class="img-responsive" src="static/images/team/bitx.png" alt="" width="100">
+                        <h2 style="color:blue">BitCoin</h2>
+                        <a class="btn btn-primary"  href="{%url 'logo'%}">Trade</a>
+                      </center>
 
                 </div>
+              </div>
+
             </div>
-            {% endfor %}
+            <div class="col-sm-4">
 
-</div>
-        </div>
-</div>
+                  <div class="card">
+                    <div class="card-body">
+                      <center>
+                        <img class="img-responsive" src="static/images/team/dash.png" alt="" width="100">
+                        <h2 style="color:blue">Dash</h2>
+                        <a class="btn btn-primary"  href="{%url 'logo'%}">Trade</a>
+                      </center>
+                    </div>
 
-  </div>
-</div>
-</div>
+                  </div>
+            </div>
 
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                <center>
+                        <img class="img-responsive" src="static/images/team/eth.png" alt="" width="100">
+                        <h2 style="color:blue">Ethereum</h2>
 
+                        <a class="btn btn-primary"  href="{%url 'logo'%}">Trade</a>
+                      </center>
+
+                </div>
+
+             </div>
+
+  
+</div>
 
 
     </div>
-  </section><!--/#pricing-->
+  </section><!--/#team-->
 
 {% else %}
-
 <center>
 <h2>You have been logged out</h2>
     <div class="border-top pt-3">
@@ -160,7 +152,7 @@
   <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
-       
+        
         <div class="social-icons">
           <ul>
             <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
@@ -173,7 +165,7 @@
         </div>
       </div>
     </div>
-   
+    
   </footer>
 
   <script type="text/javascript" src="static/js/jquery.js"></script>

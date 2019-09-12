@@ -31,36 +31,7 @@
 
   <header id="home">
 
-  <header id="home">
-    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image: url(static/images/slider/chart.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome to <span>BOT TRADING</span></h1>
-            <p class="animated fadeInRightBig"></p>
-
-          </div>
-        </div>
-        <div class="item" style="background-image: url(static/images/slider/bitcoin.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">Say Hello to <span>BOT Trading</span></h1>
-
-
-          </div>
-        </div>
-        <div class="item" style="background-image: url(/static/images/slider/stack.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig">We are <span>Creative</span></h1>
-
-          </div>
-        </div>
-      </div>
-      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-
-      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
-
-    </div>
+  
     <div class="main-nav">
       <div class="container">
         <div class="navbar-header">
@@ -113,12 +84,13 @@
 
   <section id="pricing">
     <div class="container">
+      
       <div class="row">
-         <div class="alert alert-dark" role="alert">
-      <span style="font-size:30px;"><center>Market Trading</span> <span style="font-size:15px;"></span>
+         <div class="alert alert-dark" role="alert" style="max-height: 5">
+      <b style="font-size:30px;"><center>Market Trading</b> 
 </div>
 
- <div class="list-group">
+ <div class="list-group" style="height: 380px; border: 25px; padding: 20px;overflow: auto;">
 
        <div class="list-group-item list-group-item-primary">
                 <div class="row">
@@ -142,9 +114,9 @@
                     </div>
 
         </div>
-    </div>
+    
             {% for coin in crpto_data %}
-            <div class="list-group-item list-group-item-{% if coin.percent_change_1h.0 == '-'%}danger{% else %}success{% endif %}">
+            <div class="list-group-item list-group-item-{% if coin.percent_change_1h.0 == '-'%}danger{% else %}success{% endif %}" >
                 <div class="row">
                     <div class="col-md-2">
                         {{coin.name}}
@@ -171,51 +143,7 @@
 
         </div>
 
-        <div class="row">
-         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>Choose Trade</h2>
-
-            <div class="col-sm-4">
-
-              <div class="card">
-                <div class="card-body">
-                        <center>
-                        <img class="img-responsive" src="static/images/team/bitx.png" alt="" width="100">
-                        <h2 style="color:blue">BitCoin</h2>
-                        <a class="btn btn-primary"  href="{%url 'logo'%}">Trade</a>
-                      </center>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="col-sm-4">
-
-                  <div class="card">
-                    <div class="card-body">
-                      <center>
-                        <img class="img-responsive" src="static/images/team/dash.png" alt="" width="100">
-                        <h2 style="color:blue">Dash</h2>
-                        <a class="btn btn-primary"  href="{%url 'logo'%}">Trade</a>
-                      </center>
-                    </div>
-
-                  </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-body">
-                <center>
-                        <img class="img-responsive" src="static/images/team/eth.png" alt="" width="100">
-                        <h2 style="color:blue">Ethereum</h2>
-
-                        <a class="btn btn-primary"  href="{%url 'logo'%}">Trade</a>
-                      </center>
-
-                </div>
-
-             </div>
+      
 
   </div>
 </div>
@@ -244,10 +172,7 @@
 
   <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-      <div class="container text-center">
-        <div class="footer-logo">
-          <a href="{% url 'home' %}"><img class="img-responsive" src="static/images/icon.jpg" width="70" alt="Bot Trader"></a>
-        </div>
+      
         <div class="social-icons">
           <ul>
             <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
@@ -257,16 +182,6 @@
             <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
             <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li>
           </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <p>&copy; 2019 BOT TRADE </p>
-          </div>
-
         </div>
       </div>
     </div>

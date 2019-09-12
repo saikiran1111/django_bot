@@ -10,6 +10,7 @@ urlpatterns = [
 
 	path('',views.main,name="main"),
 	path('finance',views.logo,name="logo"),
+    path('trade',views.trade,name="trade"),
 	
 	path('home',views.home,name="home"),
 	path('index',views.index,name="index"),
